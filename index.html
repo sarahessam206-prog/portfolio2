@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah Essam | Aspiring Data Analyst</title>
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--text:#202522;--muted:#68716b;--accent:#8b5e5a;--line:#dedbd3;--soft:#eee9e1}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(247,245,240,.96);border-bottom:1px solid var(--line);z-index:10}
+.nav{max-width:1120px;margin:auto;padding:16px 25px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:18px;font-weight:800}
+.links{display:flex;gap:24px;font-size:15px;font-weight:600}
+.links a:hover{color:var(--accent)}
+section{max-width:1120px;margin:auto;padding:105px 25px 55px}
+.hero{min-height:100vh;display:flex;align-items:center;gap:75px;padding-top:125px}
+.heroText{flex:1}
+.eyebrow{color:var(--accent);font-weight:800;letter-spacing:2px;font-size:14px;text-transform:uppercase}
+h1{font-size:clamp(50px,8vw,84px);line-height:1;margin:15px 0}
+h2{font-size:clamp(38px,5vw,52px);line-height:1.1;margin:0 0 24px}
+h3{font-size:22px;margin:0 0 10px}
+.subtitle{font-size:27px;font-weight:800;margin:0 0 18px}
+.lead{font-size:20px;color:var(--muted);max-width:720px}
+.photo{width:min(390px,90vw);height:min(500px,115vw);border-radius:30px;overflow:hidden;border:1px solid var(--line);background:var(--soft)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 20px;border:1px solid var(--accent);border-radius:10px;font-weight:800}
+.primary{background:var(--accent);color:#fff}
+.btn:hover{background:#684541;color:#fff}
+.muted{color:var(--muted)}
+.about{background:var(--soft);border-radius:22px;padding:30px;font-size:19px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 15px;font-weight:700}
+.skillGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;font-size:18px;font-weight:800}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.service p{color:var(--muted);margin-bottom:0}
+.contact{background:var(--text);color:#fff;border-radius:28px;padding:48px}
+.contact p{color:#d6dbd7;font-size:18px}
+.contact a{text-decoration:underline}
+footer{text-align:center;color:var(--muted);padding:30px;border-top:1px solid var(--line)}
+@media(max-width:800px){.links{display:none}.hero{flex-direction:column-reverse;text-align:center;gap:35px}.buttons{justify-content:center}.grid,.skillGrid,.services{grid-template-columns:1fr}.photo{width:285px;height:360px}section{padding-left:18px;padding-right:18px}}
+.projectImg{
+    width:100%;
+    border-radius:16px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.projectImg img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+</style>
+</head>
+<body>
+<nav><div class="nav"><a class="logo" href="#home">Sarah Essam</a><div class="links"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#tools">Tools</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></nav>
+
+<section class="hero" id="home">
+<div class="heroText">
+<div class="eyebrow">Data Analysis Portfolio</div>
+<h1>Sarah Essam</h1>
+<p class="subtitle">Aspiring Data Analyst</p>
+<p class="lead">I turn raw data into clear, actionable insights that help businesses understand performance and make better decisions.</p>
+<div class="buttons"><a class="btn primary" href="mailto:sarahessam206@gmail.com">Email Me</a><a class="btn" href="https://www.linkedin.com/in/sarah-essam-12b094415/" target="_blank">LinkedIn Profile</a></div>
+<p class="muted">sarahessam206@gmail.com · 01507925339</p>
+</div>
+<div class="photo"><img src="photo.jpg"></div>
+</section>
+
+<section id="about">
+<div class="eyebrow">About</div>
+<h2>A business-focused approach to data.</h2>
+<div class="about">
+I am a Level 3 student at Assiut University, Faculty of Commerce, specializing in the Public Policy Information Systems program, with a growing focus on Data Analysis. I am interested in transforming raw and unstructured data into clear insights that help businesses understand performance, identify trends, and make better decisions. My business background helps me look beyond the numbers and focus on what the data means for the business. I aim to support small businesses, startups, e-commerce businesses, and sales or marketing teams by turning complex data into simple, decision-ready insights through data cleaning, analysis, visualization, KPI reporting, and business-focused reporting.
+</div>
+</section>
+
+<section id="education">
+<div class="eyebrow">Education</div>
+<h2>Education</h2>
+<div class="card"><h3>Assiut University — Faculty of Commerce</h3><p>Program: Public Policy Information Systems<br>Level: Third Year<br>Expected Graduation: 2028</p></div>
+</section>
+
+<section id="skills">
+<div class="eyebrow">Technical Skills</div>
+<h2>Technical Skills</h2>
+<div class="skillGrid"><div class="skill">Data Cleaning</div><div class="skill">Exploratory Data Analysis</div><div class="skill">Data Visualization</div><div class="skill">Data Interpretation</div><div class="skill">Statistical Analysis</div><div class="skill">SQL</div><div class="skill">Python</div><div class="skill">Microsoft Excel</div><div class="skill">Power BI</div></div>
+</section>
+
+<section id="tools">
+<div class="eyebrow">Tools</div>
+<h2>Tools I Work With</h2>
+<div class="tags"><span class="tag">Microsoft Excel</span><span class="tag">SQL Server</span><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Jupyter Notebook</span><span class="tag">Google Colab</span><span class="tag">VS Code</span></div>
+</section>
+
+<section id="services">
+<div class="eyebrow">Services</div>
+<h2>What I Can Offer</h2>
+<div class="services">
+<div class="service"><h3>Data Cleaning & Preparation</h3><p>Preparing messy datasets so they are structured and ready for analysis.</p></div>
+<div class="service"><h3>Data Analysis</h3><p>Exploring datasets to identify trends, patterns, performance gaps, and useful findings.</p></div>
+<div class="service"><h3>Data Visualization</h3><p>Creating clear visual summaries that make important information easier to understand.</p></div>
+<div class="service"><h3>Dashboard & KPI Reporting</h3><p>Designing simple reporting views to monitor business performance and key metrics.</p></div>
+<div class="service"><h3>SQL Data Analysis</h3><p>Using SQL to query, filter, aggregate, and organize structured business data.</p></div>
+<div class="service"><h3>Business Insights</h3><p>Connecting analytical findings to practical business questions and decisions.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="eyebrow">Projects</div>
+<h2>Projects</h2>
+<div class="projects">
+
+  <div class="project">
+    
+    <div class="projectImg"><img src="C:\Users\user\Desktop\protofolio\projectImg.png"></div>
+      <h3>Central Superstore — SQL Data Warehouse &amp; Business Analytics</h3>
+      <p>Designed and built a retail analytics data warehouse in SQL Server, turning raw transactional sales data into a reporting-ready star schema, then used it to answer real profitability and performance questions.</p>
+      <ul>
+        <li>Modeled a star schema: 1 fact table and 4 dimension tables (Customer, Product, Date, Location), with primary/foreign key relationships.</li>
+        <li>Wrote 18 analytical SQL queries covering joins, CASE-based segmentation, subqueries, and 2 CTEs.</li>
+        <li>Built a KPI view and a parameterized stored procedure for on-demand customer sales reports.</li>
+        <li>Added indexing and validated the pipeline end-to-end (staging → dimensions → fact table) with zero data loss.</li>
+        <li>Surfaced business insights, e.g. one region drove over half the company's profit losses despite leading in sales, traced back to excessive discounting.</li>
+      </ul>
+      <div class="projectTags">
+        <span class="projectTag">SQL Server</span>
+        <span class="projectTag">Star Schema</span>
+        <span class="projectTag">CTEs &amp; Subqueries</span>
+        <span class="projectTag">KPI Reporting</span>
+        <span class="projectTag">Data Warehousing</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+<p class="muted comingSoon">More case studies are on the way as I complete them.</p>
+</section>
+
+
+<section id="contact">
+<div class="contact">
+<div class="eyebrow">Let's Connect</div>
+<h2>Let's turn data into insights.</h2>
+<p>If you are looking for someone to analyze, organize, and visualize business data, let's connect.</p>
+<p><strong>Email:</strong> <a href="mailto:sarahessam206@gmail.com">sarahessam206@gmail.com</a></p>
+<p><strong>Phone:</strong> <a href="tel:+201507925339">01507925339</a></p>
+<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sarah-essam-12b094415/" target="_blank">View LinkedIn Profile</a></p>
+</div>
+</section>
+<footer>© 2026 Sarah Essam · Aspiring Data Analyst</footer>
+</body>
+</html>
