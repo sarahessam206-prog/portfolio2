@@ -1,159 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sarah Essam | Aspiring Data Analyst</title>
-<style>
-:root{--bg:#f7f5f0;--card:#fff;--text:#202522;--muted:#68716b;--accent:#8b5e5a;--line:#dedbd3;--soft:#eee9e1}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
-nav{position:fixed;top:0;left:0;right:0;background:rgba(247,245,240,.96);border-bottom:1px solid var(--line);z-index:10}
-.nav{max-width:1120px;margin:auto;padding:16px 25px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:18px;font-weight:800}
-.links{display:flex;gap:24px;font-size:15px;font-weight:600}
-.links a:hover{color:var(--accent)}
-section{max-width:1120px;margin:auto;padding:105px 25px 55px}
-.hero{min-height:100vh;display:flex;align-items:center;gap:75px;padding-top:125px}
-.heroText{flex:1}
-.eyebrow{color:var(--accent);font-weight:800;letter-spacing:2px;font-size:14px;text-transform:uppercase}
-h1{font-size:clamp(50px,8vw,84px);line-height:1;margin:15px 0}
-h2{font-size:clamp(38px,5vw,52px);line-height:1.1;margin:0 0 24px}
-h3{font-size:22px;margin:0 0 10px}
-.subtitle{font-size:27px;font-weight:800;margin:0 0 18px}
-.lead{font-size:20px;color:var(--muted);max-width:720px}
-.photo{width:min(390px,90vw);height:min(500px,115vw);border-radius:30px;overflow:hidden;border:1px solid var(--line);background:var(--soft)}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:13px 20px;border:1px solid var(--accent);border-radius:10px;font-weight:800}
-.primary{background:var(--accent);color:#fff}
-.btn:hover{background:#684541;color:#fff}
-.muted{color:var(--muted)}
-.about{background:var(--soft);border-radius:22px;padding:30px;font-size:19px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px}
-.tags{display:flex;flex-wrap:wrap;gap:10px}
-.tag{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 15px;font-weight:700}
-.skillGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.skill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;font-size:18px;font-weight:800}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.service{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
-.service p{color:var(--muted);margin-bottom:0}
-.contact{background:var(--text);color:#fff;border-radius:28px;padding:48px}
-.contact p{color:#d6dbd7;font-size:18px}
-.contact a{text-decoration:underline}
-footer{text-align:center;color:var(--muted);padding:30px;border-top:1px solid var(--line)}
-@media(max-width:800px){.links{display:none}.hero{flex-direction:column-reverse;text-align:center;gap:35px}.buttons{justify-content:center}.grid,.skillGrid,.services{grid-template-columns:1fr}.photo{width:285px;height:360px}section{padding-left:18px;padding-right:18px}}
-.projectImg{
-    width:100%;
-    border-radius:16px;
-    overflow:hidden;
-    margin-bottom:20px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Essam | Aspiring Data Analyst</title>
 
-.projectImg img{
-    width:100%;
-    height:auto;
-    display:block;
-}
-</style>
+    <style>
+        :root {
+            --bg: #101820;
+            --surface: #18232d;
+            --card: #1d2a35;
+            --gold: #c6a66b;
+            --gold-light: #e2c895;
+            --white: #f4f1e9;
+            --muted: #a7b0b7;
+            --line: #34414b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: rgba(16, 24, 32, 0.96);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding: 75px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 55px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text .welcome {
+            color: var(--gold);
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-text h3 {
+            color: var(--muted);
+            font-size: 21px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 290px;
+            height: 350px;
+            border: 2px solid var(--gold);
+            border-radius: 150px 150px 20px 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            color: var(--gold-light);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--surface);
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .about-content strong {
+            color: var(--gold-light);
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            padding: 30px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--gold);
+            border-radius: 10px;
+        }
+
+        .education-card h3 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: var(--surface);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: var(--gold-light);
+            font-size: 17px;
+        }
+
+        /* TOOLS */
+
+        .tools-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tool {
+            padding: 13px 25px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            color: var(--gold-light);
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            background: var(--surface);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 230px;
+            background: #101820;
+            overflow: hidden;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-number {
+            color: var(--gold);
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .project-info h3 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .project-info p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .project-info ul {
+            padding-left: 20px;
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .project-info li {
+            margin-bottom: 7px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tags span {
+            background: rgba(198, 166, 107, 0.12);
+            color: var(--gold-light);
+            border: 1px solid rgba(198, 166, 107, 0.3);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+        }
+
+        /* SERVICES */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 28px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
+
+        .service-card h3 {
+            color: var(--gold-light);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--surface);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            color: var(--gold-light);
+            border: 1px solid var(--gold);
+            padding: 10px 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--muted);
+            font-size: 13px;
+            border-top: 1px solid var(--line);
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                padding: 18px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 13px;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-image {
+                width: 220px;
+                height: 270px;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<nav><div class="nav"><a class="logo" href="#home">Sarah Essam</a><div class="links"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#tools">Tools</a><a href="#services">Services</a><a href="#contact">Contact</a></div></div></nav>
 
-<section class="hero" id="home">
-<div class="heroText">
-<div class="eyebrow">Data Analysis Portfolio</div>
-<h1>Sarah Essam</h1>
-<p class="subtitle">Aspiring Data Analyst</p>
-<p class="lead">I turn raw data into clear, actionable insights that help businesses understand performance and make better decisions.</p>
-<div class="buttons"><a class="btn primary" href="mailto:sarahessam206@gmail.com">Email Me</a><a class="btn" href="https://www.linkedin.com/in/sarah-essam-12b094415/" target="_blank">LinkedIn Profile</a></div>
-<p class="muted">sarahessam206@gmail.com · 01507925339</p>
-</div>
-<div class="photo"><img src="photo.jpg"></div>
-</section>
+    <!-- NAVBAR -->
 
-<section id="about">
-<div class="eyebrow">About</div>
-<h2>A business-focused approach to data.</h2>
-<div class="about">
-I am a Level 3 student at Assiut University, Faculty of Commerce, specializing in the Public Policy Information Systems program, with a growing focus on Data Analysis. I am interested in transforming raw and unstructured data into clear insights that help businesses understand performance, identify trends, and make better decisions. My business background helps me look beyond the numbers and focus on what the data means for the business. I aim to support small businesses, startups, e-commerce businesses, and sales or marketing teams by turning complex data into simple, decision-ready insights through data cleaning, analysis, visualization, KPI reporting, and business-focused reporting.
-</div>
-</section>
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">Sarah Essam.</div>
 
-<section id="education">
-<div class="eyebrow">Education</div>
-<h2>Education</h2>
-<div class="card"><h3>Assiut University — Faculty of Commerce</h3><p>Program: Public Policy Information Systems<br>Level: Third Year<br>Expected Graduation: 2028</p></div>
-</section>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<section id="skills">
-<div class="eyebrow">Technical Skills</div>
-<h2>Technical Skills</h2>
-<div class="skillGrid"><div class="skill">Data Cleaning</div><div class="skill">Exploratory Data Analysis</div><div class="skill">Data Visualization</div><div class="skill">Data Interpretation</div><div class="skill">Statistical Analysis</div><div class="skill">SQL</div><div class="skill">Python</div><div class="skill">Microsoft Excel</div><div class="skill">Power BI</div></div>
-</section>
+    <!-- HERO -->
 
-<section id="tools">
-<div class="eyebrow">Tools</div>
-<h2>Tools I Work With</h2>
-<div class="tags"><span class="tag">Microsoft Excel</span><span class="tag">SQL Server</span><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">Jupyter Notebook</span><span class="tag">Google Colab</span><span class="tag">VS Code</span></div>
-</section>
+    <section class="hero" id="home">
+        <div class="container hero-content">
 
-<section id="services">
-<div class="eyebrow">Services</div>
-<h2>What I Can Offer</h2>
-<div class="services">
-<div class="service"><h3>Data Cleaning & Preparation</h3><p>Preparing messy datasets so they are structured and ready for analysis.</p></div>
-<div class="service"><h3>Data Analysis</h3><p>Exploring datasets to identify trends, patterns, performance gaps, and useful findings.</p></div>
-<div class="service"><h3>Data Visualization</h3><p>Creating clear visual summaries that make important information easier to understand.</p></div>
-<div class="service"><h3>Dashboard & KPI Reporting</h3><p>Designing simple reporting views to monitor business performance and key metrics.</p></div>
-<div class="service"><h3>SQL Data Analysis</h3><p>Using SQL to query, filter, aggregate, and organize structured business data.</p></div>
-<div class="service"><h3>Business Insights</h3><p>Connecting analytical findings to practical business questions and decisions.</p></div>
-</div>
-</section>
+            <div class="hero-text">
+                <div class="welcome">WELCOME TO MY PORTFOLIO</div>
 
-<section id="projects">
-<div class="eyebrow">Projects</div>
-<h2>Projects</h2>
-<div class="projects">
+                <h1>
+                    Hi, I'm <span>Sarah Essam</span>
+                </h1>
 
-  <div class="project">
-    
-    <div class="projectImg"><img src="C:\Users\user\Desktop\protofolio\projectImg.png"></div>
-      <h3>Central Superstore — SQL Data Warehouse &amp; Business Analytics</h3>
-      <p>Designed and built a retail analytics data warehouse in SQL Server, turning raw transactional sales data into a reporting-ready star schema, then used it to answer real profitability and performance questions.</p>
-      <ul>
-        <li>Modeled a star schema: 1 fact table and 4 dimension tables (Customer, Product, Date, Location), with primary/foreign key relationships.</li>
-        <li>Wrote 18 analytical SQL queries covering joins, CASE-based segmentation, subqueries, and 2 CTEs.</li>
-        <li>Built a KPI view and a parameterized stored procedure for on-demand customer sales reports.</li>
-        <li>Added indexing and validated the pipeline end-to-end (staging → dimensions → fact table) with zero data loss.</li>
-        <li>Surfaced business insights, e.g. one region drove over half the company's profit losses despite leading in sales, traced back to excessive discounting.</li>
-      </ul>
-      <div class="projectTags">
-        <span class="projectTag">SQL Server</span>
-        <span class="projectTag">Star Schema</span>
-        <span class="projectTag">CTEs &amp; Subqueries</span>
-        <span class="projectTag">KPI Reporting</span>
-        <span class="projectTag">Data Warehousing</span>
-      </div>
-    </div>
-  </div>
+                <h3>Aspiring Data Analyst</h3>
 
-</div>
-<p class="muted comingSoon">More case studies are on the way as I complete them.</p>
-</section>
+                <p>
+                    I am passionate about Data Analysis and transforming
+                    raw data into meaningful insights. I enjoy working
+                    with Python and SQL to explore data, solve problems,
+                    and support better decision-making.
+                </p>
 
+                <a href="#projects" class="btn">Explore My Work</a>
+            </div>
 
-<section id="contact">
-<div class="contact">
-<div class="eyebrow">Let's Connect</div>
-<h2>Let's turn data into insights.</h2>
-<p>If you are looking for someone to analyze, organize, and visualize business data, let's connect.</p>
-<p><strong>Email:</strong> <a href="mailto:sarahessam206@gmail.com">sarahessam206@gmail.com</a></p>
-<p><strong>Phone:</strong> <a href="tel:+201507925339">01507925339</a></p>
-<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sarah-essam-12b094415/" target="_blank">View LinkedIn Profile</a></p>
-</div>
-</section>
-<footer>© 2026 Sarah Essam · Aspiring Data Analyst</footer>
+            <div class="hero-image">
+                <img src="photo.jpg" alt="Sarah Essam">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A little introduction about my journey
+            </p>
+
+            <div class="about-content">
+                <p>
+                    I am a third-year student at the Faculty of Commerce,
+                    Assiut University, specializing in Public Policy
+                    Information Systems.
+                    <br><br>
+
+                    My interest in data analysis comes from my curiosity
+                    about understanding information and discovering
+                    meaningful patterns behind data.
+                    <br><br>
+
+                    I have been developing my technical skills in
+                    <strong>Python , SQL , Power Bi , Tableau</strong>, focusing on data
+                    processing, database management, and analytical
+                    thinking. My goal is to grow as a Data Analyst and
+                    contribute to real-world projects through
+                    data-driven insights.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Education</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Academic background
+            </p>
+
+            <div class="education-card">
+                <h3>Assiut University</h3>
+
+                <p>
+                    Faculty of Commerce
+                </p>
+
+                <p>
+                    Public Policy Information Systems (PPIS)
+                </p>
+
+                <p>
+                    Level 3 | Expected Graduation: 2028
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical <span>Skills</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Skills I am developing in Data Analysis
+            </p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Python</h3>
+                </div>
+
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Cleaning</h3>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Analysis</h3>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Database Management</h3>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Visualization</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+
+    <section id="tools">
+        <div class="container">
+
+            <h2 class="section-title">
+                Tools & <span>Technologies</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Technologies I work with
+            </p>
+
+            <div class="tools-grid">
+                <div class="tool">Python</div>
+                <div class="tool">SQL Server</div>
+                <div class="tool">SSMS</div>
+                <div class="tool">Pandas</div>
+                <div class="tool">Matplotlib</div>
+                <div class="tool">Power BI</div>
+                <div class="tool">Tableau</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Projects</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A selection of my data analysis and visualization work
+            </p>
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1: CENTRAL SUPERSTORE -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="projectImg.png"
+                             alt="Central Superstore SQL Project">
+                    </div>
+
+                    <div class="project-info">
+
+                        <div class="project-number">PROJECT 01</div>
+
+                        <h3>Central Superstore</h3>
+
+                        <p>
+                            A SQL-based data warehouse and business
+                            analytics project focused on organizing
+                            business data and extracting useful insights
+                            to support decision-making.
+                        </p>
+
+                        <ul>
+                            <li>Designed a Star Schema data warehouse.</li>
+                            <li>Created fact and dimension tables.</li>
+                            <li>Worked with SQL joins, subqueries, and CTEs.</li>
+                            <li>Created analytical queries and KPI views.</li>
+                            <li>Used a stored procedure and indexing.</li>
+                            <li>Analyzed sales and profit performance.</li>
+                        </ul>
+
+                        <p>
+                            One finding showed that a region achieved
+                            high sales but generated losses due to
+                            discounting.
+                        </p>
+
+                        <div class="tags">
+                            <span>SQL Server</span>
+                            <span>SSMS</span>
+                            <span>Data Warehouse</span>
+                            <span>Star Schema</span>
+                            <span>Business Analytics</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: AUTHOR ANALYTICS -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="dashboard2.png"
+                             alt="Author Analytics Dashboard">
+                    </div>
+
+                    <div class="project-info">
+
+                        <div class="project-number">PROJECT 02</div>
+
+                        <h3>Author Analytics Dashboard</h3>
+
+                        <p>
+                            An interactive dashboard designed to explore
+                            and present author-related data through
+                            visual analytics.
+                        </p>
+
+                        <ul>
+                            <li>Organized and explored author data.</li>
+                            <li>Presented information through visualizations.</li>
+                            <li>Used dashboard elements to make data easier to understand.</li>
+                            <li>Provided an overview of the available data.</li>
+                        </ul>
+
+                        <div class="tags">
+                            <span>Data Visualization</span>
+                            <span>Dashboard</span>
+                            <span>Data Analysis</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: WWI -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="dashboard1.png"
+                             alt="Wide World Importers Sales Dashboard">
+                    </div>
+
+                    <div class="project-info">
+
+                        <div class="project-number">PROJECT 03</div>
+
+                        <h3>WWI Sales Analytics Dashboard</h3>
+
+                        <p>
+                            A sales analytics dashboard built using
+                            the Wide World Importers dataset to explore
+                            sales data across different business
+                            dimensions.
+                        </p>
+
+                        <ul>
+                            <li>Worked with a Fact Sales table.</li>
+                            <li>Used Customer and Employee dimensions.</li>
+                            <li>Analyzed data by City and Date.</li>
+                            <li>Included Stock Item information.</li>
+                            <li>Used filters to explore different views of the data.</li>
+                        </ul>
+
+                        <div class="tags">
+                            <span>Wide World Importers</span>
+                            <span>Power BI</span>
+                            <span>Data Modeling</span>
+                            <span>Dashboard</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services">
+        <div class="container">
+
+            <h2 class="section-title">
+                Services I <span>Offer</span>
+            </h2>
+
+            <p class="section-subtitle">
+                How I can help with data-related tasks
+            </p>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <h3>Data Cleaning</h3>
+                    <p>
+                        Organizing datasets and handling common
+                        data quality issues using Python.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>SQL Queries</h3>
+                    <p>
+                        Writing SQL queries to retrieve, organize,
+                        and analyze data from databases.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Data Analysis</h3>
+                    <p>
+                        Exploring datasets to identify patterns,
+                        trends, and useful insights.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Data Visualization</h3>
+                    <p>
+                        Presenting data through clear and organized
+                        visualizations and dashboards.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <h2 class="section-title">
+                Let's <span>Connect</span>
+            </h2>
+
+            <div class="contact-content">
+
+                <p>
+                    I am always open to learning opportunities,
+                    internships, and collaborations.
+                    Feel free to contact me!
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="mailto:sarahessam206@gmail.com">
+                        Email Me
+                    </a>
+
+                    <a href="tel:+201507925339">
+                        Call Me
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/sarah-essam-12b094415/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>
+            © 2026 <span>Sarah Essam</span>.
+            All Rights Reserved.
+        </p>
+    </footer>
+
 </body>
 </html>
